@@ -1,11 +1,11 @@
-local Rayfield = loadstring(game:HttpGet('https://[Log in to view URL]'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "J7KY's Universal Hub",
+   Name = "J7KY's Universal Hub (j7kyOS 1.14 BETA)",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Welcome! - Universal Scripts",
    LoadingSubtitle = "by j7kyteam",
-   Theme = "Default", -- Check https://[Log in to view URL]
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -47,6 +47,52 @@ Rayfield:Notify({
 local Button = MainTab:CreateButton({
    Name = "Infinite Yield",
    Callback = function()
-       loadstring(game:HttpGet(('https://[Log in to view URL]'),true))()
+       loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Aimbot & ESP",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/ZephyrOnTop/Main/refs/heads/main/Main"))()
+        end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "AutoClicker by Ezpi",
+   Callback = function()
+       loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/ROBLOX_AutoClicker"))()
+        end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Chat Bypasser",
+   Callback = function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/cyJ1qCe4",true))()
+        end,
+})
+
+local TrollingTab = Window:CreateTab("🌌 Trolling", nil) -- Title, Image
+local TrollingSection = TrollingTab:CreateSection("Trollling")
+
+local Button = TrollingTab:CreateButton({
+   Name = "Trolling GUI",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+        end,
+})
+
+local MiscTab = Window:CreateTab("🌌 Misc", nil) -- Title, Image
+local MiscSection = MiscTab:CreateSection("Credits")
+
+local Paragraph = MiscTab:CreateParagraph({Title = "our devs and shii", Content = "created by jacobdev (lizzystory12) with the help of sixpine"})
+local Paragraph = MiscTab:CreateParagraph({Title = "developed by jacobdev (lizzystory12) with rayfield ui", Content = ""})
+
+local MiscSection = MiscTab:CreateSection("Close GUI")
+
+local MiscButton = MiscTab:CreateButton({
+   Name = "DestroyGUI (bye bye!)",
+   Callback = function()
+    Rayfield:Destroy()
    end,
 })
